@@ -130,6 +130,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_course.Designer.vb">
+      <DependentUpon>add_course.vb</DependentUpon>
+    </Compile>
+    <Compile Include="add_course.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admission.Designer.vb">
       <DependentUpon>Admission.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="add_course.resx">
+      <DependentUpon>add_course.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admission.resx">
       <DependentUpon>Admission.vb</DependentUpon>
     </EmbeddedResource>

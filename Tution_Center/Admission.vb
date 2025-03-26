@@ -62,4 +62,10 @@ Public Class Admission
             connection.Close()
         End Try
     End Sub
+
+    Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton3.Click
+        Dim addcor As New add_course()
+        addcor.Show()
+        Me.Hide()
+    End Sub
 End Class

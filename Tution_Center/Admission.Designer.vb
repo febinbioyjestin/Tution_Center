@@ -34,6 +34,7 @@ Partial Class Admission
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Guna2TextBox4 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2GradientButton3 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.SuspendLayout()
         '
         'Guna2BorderlessForm1
@@ -203,12 +204,32 @@ Partial Class Admission
         Me.Guna2GradientButton2.TabIndex = 14
         Me.Guna2GradientButton2.Text = "Save Data"
         '
+        'Guna2GradientButton3
+        '
+        Me.Guna2GradientButton3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GradientButton3.BorderRadius = 8
+        Me.Guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton3.FillColor = System.Drawing.Color.Gold
+        Me.Guna2GradientButton3.FillColor2 = System.Drawing.Color.Goldenrod
+        Me.Guna2GradientButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton3.ForeColor = System.Drawing.Color.White
+        Me.Guna2GradientButton3.Location = New System.Drawing.Point(24, 233)
+        Me.Guna2GradientButton3.Name = "Guna2GradientButton3"
+        Me.Guna2GradientButton3.Size = New System.Drawing.Size(146, 40)
+        Me.Guna2GradientButton3.TabIndex = 15
+        Me.Guna2GradientButton3.Text = "Add Courses"
+        '
         'Admission
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Tution_Center.My.Resources.Resources.Get_Stronger___3_
         Me.ClientSize = New System.Drawing.Size(776, 466)
+        Me.Controls.Add(Me.Guna2GradientButton3)
         Me.Controls.Add(Me.Guna2GradientButton2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Guna2TextBox4)
@@ -238,4 +259,5 @@ Partial Class Admission
     Friend WithEvents Guna2TextBox4 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2TextBox3 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2GradientButton3 As Guna.UI2.WinForms.Guna2GradientButton
 End Class
