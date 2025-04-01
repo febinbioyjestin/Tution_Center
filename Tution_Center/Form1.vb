@@ -32,4 +32,28 @@ Public Class Form1
             connection.Close()
         End Try
     End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
+        If Guna2PictureBox1.Image IsNot Nothing Then
+            Dim img As Bitmap = New Bitmap(Guna2PictureBox1.Image) ' Clone the existing image
+            Dim g As Graphics = Graphics.FromImage(img)
+
+            ' Define text properties
+            Dim myFont As New Font("Arial", 14, FontStyle.Bold)
+            Dim myBrush As New SolidBrush(Color.White) ' Text color
+
+            ' Set text position (adjust as needed)
+            Dim x As Integer = 10
+            Dim y As Integer = 10
+            g.DrawString("Hello, World!", myFont, myBrush, x, y)
+
+            ' Update the PictureBox with the new image
+            Guna2PictureBox1.Image = img
+            g.Dispose() ' Free resources
+        End If
+    End Sub
 End Class

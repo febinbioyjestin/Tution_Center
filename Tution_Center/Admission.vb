@@ -68,4 +68,10 @@ Public Class Admission
         addcor.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Guna2GradientButton4_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton4.Click
+        Dim Enroll As New Form2()
+        Enroll.Show()
+        Me.Hide()
+    End Sub
 End Class

@@ -149,6 +149,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="enrollment .Designer.vb">
+      <DependentUpon>enrollment .vb</DependentUpon>
+    </Compile>
+    <Compile Include="enrollment .vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enrollment .resx">
+      <DependentUpon>enrollment .vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -209,6 +218,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Get Stronger, %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form 1 photo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form 1 photo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login teacher design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canva form1 feb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\form 1 canv org.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admission desgn 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\COURSE design.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
