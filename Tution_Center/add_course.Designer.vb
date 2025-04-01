@@ -77,7 +77,7 @@ Partial Class add_course
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(524, 257)
+        Me.Label4.Location = New System.Drawing.Point(524, 278)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(149, 25)
@@ -97,7 +97,7 @@ Partial Class add_course
         Me.Guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox4.Location = New System.Drawing.Point(503, 294)
+        Me.Guna2TextBox4.Location = New System.Drawing.Point(503, 308)
         Me.Guna2TextBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2TextBox4.Name = "Guna2TextBox4"
         Me.Guna2TextBox4.PlaceholderText = "In INR"
@@ -111,7 +111,7 @@ Partial Class add_course
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(524, 114)
+        Me.Label3.Location = New System.Drawing.Point(524, 153)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(143, 25)
@@ -124,7 +124,7 @@ Partial Class add_course
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(227, 259)
+        Me.Label2.Location = New System.Drawing.Point(227, 278)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(264, 25)
@@ -144,7 +144,7 @@ Partial Class add_course
         Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(232, 287)
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(232, 308)
         Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PlaceholderText = "Course Competion Time in Months"
@@ -158,7 +158,7 @@ Partial Class add_course
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(227, 123)
+        Me.Label1.Location = New System.Drawing.Point(227, 153)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(157, 25)
@@ -178,7 +178,7 @@ Partial Class add_course
         Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(232, 153)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(232, 185)
         Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PlaceholderText = "Name"
@@ -199,7 +199,7 @@ Partial Class add_course
         Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.AntiqueWhite
         Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(22, 110)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(13, 104)
         Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
         Me.Guna2GradientButton1.Size = New System.Drawing.Size(155, 44)
@@ -218,7 +218,7 @@ Partial Class add_course
         Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Guna2ComboBox1.ItemHeight = 30
         Me.Guna2ComboBox1.Items.AddRange(New Object() {"Teacher A", "Teacher B", "Teacher C"})
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(503, 153)
+        Me.Guna2ComboBox1.Location = New System.Drawing.Point(503, 185)
         Me.Guna2ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
         Me.Guna2ComboBox1.Size = New System.Drawing.Size(205, 36)

@@ -56,12 +56,12 @@ Partial Class Form1
         Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox1.Location = New System.Drawing.Point(520, 202)
-        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(693, 249)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2TextBox1.Name = "Guna2TextBox1"
         Me.Guna2TextBox1.PlaceholderText = "Username"
         Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(237, 41)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(316, 50)
         Me.Guna2TextBox1.TabIndex = 0
         '
         'Guna2TextBox2
@@ -69,7 +69,7 @@ Partial Class Form1
         Me.Guna2TextBox2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2TextBox2.BorderRadius = 8
         Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.SizeWE
-        Me.Guna2TextBox2.DefaultText = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Guna2TextBox2.DefaultText = ""
         Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
@@ -78,13 +78,13 @@ Partial Class Form1
         Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2TextBox2.Location = New System.Drawing.Point(520, 283)
-        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(693, 348)
+        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Guna2TextBox2.Name = "Guna2TextBox2"
         Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Guna2TextBox2.PlaceholderText = "password"
         Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(237, 41)
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(316, 50)
         Me.Guna2TextBox2.TabIndex = 1
         '
         'Label1
@@ -93,7 +93,8 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.LightGray
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(520, 173)
+        Me.Label1.Location = New System.Drawing.Point(693, 213)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 25)
         Me.Label1.TabIndex = 2
@@ -105,7 +106,8 @@ Partial Class Form1
         Me.Label2.BackColor = System.Drawing.Color.LightGray
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(520, 254)
+        Me.Label2.Location = New System.Drawing.Point(693, 313)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(98, 25)
         Me.Label2.TabIndex = 3
@@ -123,9 +125,10 @@ Partial Class Form1
         Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.Black
         Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(542, 346)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(723, 426)
+        Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Me.Guna2GradientButton1.Size = New System.Drawing.Size(178, 35)
+        Me.Guna2GradientButton1.Size = New System.Drawing.Size(237, 43)
         Me.Guna2GradientButton1.TabIndex = 4
         Me.Guna2GradientButton1.Text = "Login"
         '
@@ -135,7 +138,8 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(530, 71)
+        Me.Label3.Location = New System.Drawing.Point(707, 87)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(222, 69)
         Me.Label3.TabIndex = 5
@@ -149,19 +153,20 @@ Partial Class Form1
         Me.Guna2PictureBox1.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.ImageRotate = 0!
         Me.Guna2PictureBox1.InitialImage = Global.Tution_Center.My.Resources.Resources.canva_form1_feb
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(7, 0)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(9, 0)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(507, 504)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(676, 620)
         Me.Guna2PictureBox1.TabIndex = 7
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.WaitOnLoad = True
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(770, 505)
+        Me.ClientSize = New System.Drawing.Size(1027, 622)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Guna2GradientButton1)
@@ -171,6 +176,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Guna2TextBox1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

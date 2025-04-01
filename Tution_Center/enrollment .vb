@@ -91,6 +91,10 @@ Public Class Form2
         Finally
             conn.Close()
         End Try
+
+        Dim paymentForm As New payment(stuId, courseId) ' Pass ID values
+        paymentForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
@@ -147,4 +151,9 @@ Public Class Form2
         enrollmentForm.ShowDialog()
     End Sub
 
+    Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton3.Click
+        Dim adm As New Admission()
+        adm.Show()
+        Me.Hide()
+    End Sub
 End Class
