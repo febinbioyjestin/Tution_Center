@@ -105,12 +105,12 @@ Partial Class payment
         Me.Guna2GradientButton2.FillColor2 = System.Drawing.Color.Goldenrod
         Me.Guna2GradientButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton2.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton2.Location = New System.Drawing.Point(346, 459)
+        Me.Guna2GradientButton2.Location = New System.Drawing.Point(331, 431)
         Me.Guna2GradientButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
         Me.Guna2GradientButton2.Size = New System.Drawing.Size(161, 49)
         Me.Guna2GradientButton2.TabIndex = 42
-        Me.Guna2GradientButton2.Text = "Save"
+        Me.Guna2GradientButton2.Text = "Proceed"
         '
         'Label3
         '
@@ -141,6 +141,7 @@ Partial Class payment
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Yellow
         Me.Label2.Location = New System.Drawing.Point(408, 104)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
@@ -153,6 +154,7 @@ Partial Class payment
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Yellow
         Me.Label5.Location = New System.Drawing.Point(408, 217)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
