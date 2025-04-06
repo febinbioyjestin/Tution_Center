@@ -1,11 +1,14 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public Class Form2
+    Dim studentDict As New Dictionary(Of String, Integer)
+    Dim courseDict As New Dictionary(Of String, Integer)
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadStudents()
         LoadCourses()
+        Guna2DataGridView1.Visible = False
     End Sub
-
-    Dim studentDict As New Dictionary(Of String, Integer) ' Dictionary to store Student Name & ID
 
     Private Sub LoadStudents()
         Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
@@ -16,13 +19,13 @@ Public Class Form2
             conn.Open()
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             Guna2ComboBox1.Items.Clear()
-            studentDict.Clear() ' Clear previous data
+            studentDict.Clear()
 
             While reader.Read()
                 Dim stuId As Integer = reader("stu_id")
                 Dim stuName As String = reader("stu_name")
-                studentDict(stuName) = stuId  ' Store in Dictionary
-                Guna2ComboBox1.Items.Add(stuName) ' Add only Name in ComboBox
+                studentDict(stuName) = stuId
+                Guna2ComboBox1.Items.Add(stuName)
             End While
 
             reader.Close()
@@ -32,8 +35,6 @@ Public Class Form2
             conn.Close()
         End Try
     End Sub
-
-    Dim courseDict As New Dictionary(Of String, Integer) ' Dictionary to store Course Name & ID
 
     Private Sub LoadCourses()
         Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
@@ -49,13 +50,56 @@ Public Class Form2
             While reader.Read()
                 Dim courseId As Integer = reader("course_id")
                 Dim courseName As String = reader("course_name")
-                courseDict(courseName) = courseId  ' Store in Dictionary
-                Guna2ComboBox2.Items.Add(courseName) ' Add only Name in ComboBox
+                courseDict(courseName) = courseId
+                Guna2ComboBox2.Items.Add(courseName)
             End While
 
             reader.Close()
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub Guna2ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2ComboBox2.SelectedIndexChanged
+        If Guna2ComboBox2.SelectedItem Is Nothing Then Return
+
+        Dim selectedCourse As String = Guna2ComboBox2.SelectedItem.ToString()
+        Dim courseId As Integer = courseDict(selectedCourse)
+
+        Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
+        Dim query As String = "SELECT course_id, course_name, tutor_name, course_comp_time, course_fee FROM Course WHERE course_id = @id"
+        Dim cmd As New MySqlCommand(query, conn)
+        cmd.Parameters.AddWithValue("@id", courseId)
+
+        Try
+            conn.Open()
+            Dim adapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable()
+            adapter.Fill(dt)
+
+            ' Bind and format DataGridView
+            Guna2DataGridView1.DataSource = dt
+            Guna2DataGridView1.Visible = True
+
+            ' Hide course_id column
+            If Guna2DataGridView1.Columns.Contains("course_id") Then
+                Guna2DataGridView1.Columns("course_id").Visible = False
+            End If
+
+            ' Rename headers
+            Guna2DataGridView1.Columns("course_name").HeaderText = "Course Name"
+            Guna2DataGridView1.Columns("tutor_name").HeaderText = "Tutor"
+            Guna2DataGridView1.Columns("course_comp_time").HeaderText = "Completion Time (Days)"
+            Guna2DataGridView1.Columns("course_fee").HeaderText = "Course Fee"
+
+            ' Auto-size columns
+            Guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            Guna2DataGridView1.AutoResizeColumns()
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading course details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             conn.Close()
         End Try
@@ -68,12 +112,8 @@ Public Class Form2
             Return
         End If
 
-        Dim stuName As String = Guna2ComboBox1.SelectedItem.ToString()
-        Dim courseName As String = Guna2ComboBox2.SelectedItem.ToString()
-
-        ' Get corresponding IDs
-        Dim stuId As Integer = studentDict(stuName)
-        Dim courseId As Integer = courseDict(courseName)
+        Dim stuId As Integer = studentDict(Guna2ComboBox1.SelectedItem.ToString())
+        Dim courseId As Integer = courseDict(Guna2ComboBox2.SelectedItem.ToString())
 
         Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
         Dim query As String = "INSERT INTO Enrollment (stu_id, course_id) VALUES (@stu_id, @course_id)"
@@ -92,7 +132,7 @@ Public Class Form2
             conn.Close()
         End Try
 
-        Dim paymentForm As New payment(stuId, courseId) ' Pass ID values
+        Dim paymentForm As New payment(stuId, courseId)
         paymentForm.Show()
         Me.Hide()
     End Sub
@@ -126,13 +166,11 @@ Public Class Form2
             conn.Close()
         End Try
 
-        ' If no data is found
         If enrollmentData = "Enrollment Details:" & vbNewLine & "-----------------------------" & vbNewLine Then
             MessageBox.Show("No Enrollment Records Found!", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Return
         End If
 
-        ' Show Data in a Scrollable MessageBox
         Dim enrollmentForm As New Form With {
             .Text = "Enrollment Records",
             .Width = 400,

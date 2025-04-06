@@ -232,6 +232,12 @@
     <Compile Include="Admission.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="card.Designer.vb">
+      <DependentUpon>card.vb</DependentUpon>
+    </Compile>
+    <Compile Include="card.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +272,12 @@
     <Compile Include="payment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="upi.Designer.vb">
+      <DependentUpon>upi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="upi.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="add_course.resx">
@@ -273,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admission.resx">
       <DependentUpon>Admission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="card.resx">
+      <DependentUpon>card.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -288,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upi.resx">
+      <DependentUpon>upi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -344,6 +362,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Payment DESING%27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDU COACH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UPI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2design.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

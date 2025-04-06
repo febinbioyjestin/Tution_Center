@@ -237,7 +237,7 @@ Partial Class add_course
         Me.Guna2GradientButton3.FillColor2 = System.Drawing.Color.AntiqueWhite
         Me.Guna2GradientButton3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton3.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton3.Location = New System.Drawing.Point(13, 240)
+        Me.Guna2GradientButton3.Location = New System.Drawing.Point(13, 245)
         Me.Guna2GradientButton3.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton3.Name = "Guna2GradientButton3"
         Me.Guna2GradientButton3.Size = New System.Drawing.Size(173, 42)
@@ -257,7 +257,7 @@ Partial Class add_course
         Me.Guna2GradientButton4.FillColor2 = System.Drawing.Color.AntiqueWhite
         Me.Guna2GradientButton4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton4.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton4.Location = New System.Drawing.Point(13, 294)
+        Me.Guna2GradientButton4.Location = New System.Drawing.Point(13, 299)
         Me.Guna2GradientButton4.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton4.Name = "Guna2GradientButton4"
         Me.Guna2GradientButton4.Size = New System.Drawing.Size(173, 46)

@@ -32,6 +32,7 @@ Partial Class Form1
         Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,7 +126,7 @@ Partial Class Form1
         Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.Black
         Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(723, 426)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(723, 454)
         Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
         Me.Guna2GradientButton1.Size = New System.Drawing.Size(237, 43)
@@ -161,12 +162,26 @@ Partial Class Form1
         Me.Guna2PictureBox1.TabStop = False
         Me.Guna2PictureBox1.WaitOnLoad = True
         '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.AutoSize = False
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(878, 406)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(115, 18)
+        Me.Guna2HtmlLabel1.TabIndex = 8
+        Me.Guna2HtmlLabel1.Text = "Forgot Password ?"
+        Me.Guna2HtmlLabel1.UseGdiPlusTextRendering = True
+        Me.Guna2HtmlLabel1.UseSystemCursors = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ClientSize = New System.Drawing.Size(1027, 622)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Guna2GradientButton1)
@@ -193,4 +208,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

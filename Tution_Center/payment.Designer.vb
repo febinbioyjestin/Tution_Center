@@ -17,9 +17,6 @@ Partial Class payment
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
@@ -74,7 +71,7 @@ Partial Class payment
         Me.Guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.Guna2ComboBox2.ItemHeight = 30
         Me.Guna2ComboBox2.Items.AddRange(New Object() {"Cash", "Card", "UPI"})
-        Me.Guna2ComboBox2.Location = New System.Drawing.Point(294, 351)
+        Me.Guna2ComboBox2.Location = New System.Drawing.Point(313, 326)
         Me.Guna2ComboBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2ComboBox2.Name = "Guna2ComboBox2"
         Me.Guna2ComboBox2.Size = New System.Drawing.Size(214, 36)
@@ -85,7 +82,7 @@ Partial Class payment
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(307, 322)
+        Me.Label1.Location = New System.Drawing.Point(326, 297)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(185, 25)
@@ -105,7 +102,7 @@ Partial Class payment
         Me.Guna2GradientButton2.FillColor2 = System.Drawing.Color.Goldenrod
         Me.Guna2GradientButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2GradientButton2.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton2.Location = New System.Drawing.Point(331, 431)
+        Me.Guna2GradientButton2.Location = New System.Drawing.Point(331, 402)
         Me.Guna2GradientButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
         Me.Guna2GradientButton2.Size = New System.Drawing.Size(161, 49)
@@ -117,24 +114,24 @@ Partial Class payment
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(286, 104)
+        Me.Label3.Location = New System.Drawing.Point(263, 158)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 25)
+        Me.Label3.Size = New System.Drawing.Size(149, 25)
         Me.Label3.TabIndex = 41
-        Me.Label3.Text = "Student ID"
+        Me.Label3.Text = "Student Name"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(296, 217)
+        Me.Label4.Location = New System.Drawing.Point(263, 217)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 25)
+        Me.Label4.Size = New System.Drawing.Size(144, 25)
         Me.Label4.TabIndex = 47
-        Me.Label4.Text = "course ID"
+        Me.Label4.Text = "Course Name"
         '
         'Label2
         '
@@ -142,7 +139,7 @@ Partial Class payment
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Yellow
-        Me.Label2.Location = New System.Drawing.Point(408, 104)
+        Me.Label2.Location = New System.Drawing.Point(424, 158)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 25)
@@ -155,7 +152,7 @@ Partial Class payment
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Yellow
-        Me.Label5.Location = New System.Drawing.Point(408, 217)
+        Me.Label5.Location = New System.Drawing.Point(424, 217)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(104, 25)
@@ -167,7 +164,7 @@ Partial Class payment
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Tution_Center.My.Resources.Resources.Payment_DESING_
-        Me.ClientSize = New System.Drawing.Size(520, 512)
+        Me.ClientSize = New System.Drawing.Size(573, 512)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)

@@ -15,12 +15,31 @@ Public Class payment
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label2.Text = "" & stuId.ToString()
-        Label5.Text = "" & courseId.ToString()
+        ' Fetch student name and course name using the IDs
+        Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
+        Try
+            conn.Open()
+
+            ' Get student name
+            Dim stuCmd As New MySqlCommand("SELECT stu_name FROM Students WHERE stu_id = @id", conn)
+            stuCmd.Parameters.AddWithValue("@id", stuId)
+            Dim stuName = stuCmd.ExecuteScalar()
+            Label2.Text = If(stuName IsNot Nothing, stuName.ToString(), "Unknown Student")
+
+            ' Get course name
+            Dim courseCmd As New MySqlCommand("SELECT course_name FROM Course WHERE course_id = @id", conn)
+            courseCmd.Parameters.AddWithValue("@id", courseId)
+            Dim courseName = courseCmd.ExecuteScalar()
+            Label5.Text = If(courseName IsNot Nothing, courseName.ToString(), "Unknown Course")
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading names: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
-        ' Ensure a mode of payment is selected
         If Guna2ComboBox2.SelectedItem Is Nothing Then
             MessageBox.Show("Please select a mode of payment!", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
@@ -28,12 +47,19 @@ Public Class payment
 
         Dim modeOfPayment As String = Guna2ComboBox2.SelectedItem.ToString()
 
-        ' Database connection
+        If modeOfPayment = "Card" Then
+            Dim cardForm As New card()
+            cardForm.ShowDialog()
+        ElseIf modeOfPayment = "UPI" Then
+            Dim upiForm As New upi()
+            upiForm.ShowDialog()
+        End If
+
+        ' Save payment data after form closes
         Dim conn As New MySqlConnection("server=localhost;user=root;password=admin;database=coaching")
         Dim query As String = "INSERT INTO Payment (stu_id, course_id, mode_payment) VALUES (@stu_id, @course_id, @mode_payment)"
         Dim cmd As New MySqlCommand(query, conn)
 
-        ' Assign values to parameters
         cmd.Parameters.AddWithValue("@stu_id", stuId)
         cmd.Parameters.AddWithValue("@course_id", courseId)
         cmd.Parameters.AddWithValue("@mode_payment", modeOfPayment)
@@ -43,7 +69,7 @@ Public Class payment
             cmd.ExecuteNonQuery()
             conn.Close()
 
-            ' Fetch latest payment details
+            ' Fetch latest payment details for receipt
             Dim paymentQuery As String = "SELECT p.pay_id, p.date, s.stu_name, s.stu_email, s.stu_contact, 
                                                  c.course_name, c.tutor_name, c.course_comp_time, c.course_fee, p.mode_payment 
                                           FROM Payment p
@@ -59,7 +85,6 @@ Public Class payment
             Dim reader As MySqlDataReader = paymentCmd.ExecuteReader()
 
             If reader.Read() Then
-                ' Extract payment details
                 Dim payId As Integer = reader("pay_id")
                 Dim payDate As String = reader("date").ToString()
                 Dim studentName As String = reader("stu_name").ToString()
@@ -71,7 +96,6 @@ Public Class payment
                 Dim courseFee As String = "₹" & reader("course_fee").ToString()
                 Dim paymentMode As String = reader("mode_payment").ToString()
 
-                ' Generate PDF Receipt using PdfSharp
                 GeneratePDFReceipt(payId, payDate, studentName, studentEmail, studentContact, courseName, tutorName, courseTime, courseFee, paymentMode)
 
                 MessageBox.Show("Payment Successful! Receipt generated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -85,7 +109,6 @@ Public Class payment
         End Try
     End Sub
 
-    ' Function to generate a PDF receipt using PdfSharp
     Private Sub GeneratePDFReceipt(payId As Integer, payDate As String, studentName As String, studentEmail As String, studentContact As String, courseName As String, tutorName As String, courseTime As String, courseFee As String, paymentMode As String)
         Dim doc As New PdfDocument()
         doc.Info.Title = "Payment Receipt"
@@ -94,13 +117,11 @@ Public Class payment
         Dim fontTitle As New XFont("Arial", 16)
         Dim fontNormal As New XFont("Arial", 12)
 
-        Dim yPos As Double = 40 ' Starting position
+        Dim yPos As Double = 40
 
-        ' Title
         gfx.DrawString("Payment Receipt", fontTitle, XBrushes.Black, New XPoint(200, yPos))
         yPos += 30
 
-        ' Payment Details
         gfx.DrawString("Payment ID: " & payId, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 20
         gfx.DrawString("Date: " & payDate, fontNormal, XBrushes.Black, New XPoint(50, yPos))
@@ -108,7 +129,6 @@ Public Class payment
         gfx.DrawString("Payment Mode: " & paymentMode, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 30
 
-        ' Student Details
         gfx.DrawString("Student Name: " & studentName, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 20
         gfx.DrawString("Email: " & studentEmail, fontNormal, XBrushes.Black, New XPoint(50, yPos))
@@ -116,7 +136,6 @@ Public Class payment
         gfx.DrawString("Contact: " & studentContact, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 30
 
-        ' Course Details
         gfx.DrawString("Course: " & courseName, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 20
         gfx.DrawString("Tutor: " & tutorName, fontNormal, XBrushes.Black, New XPoint(50, yPos))
@@ -126,15 +145,12 @@ Public Class payment
         gfx.DrawString("Course Fee: " & courseFee, fontNormal, XBrushes.Black, New XPoint(50, yPos))
         yPos += 30
 
-        ' Closing
         gfx.DrawString("Thank you for your payment!", fontNormal, XBrushes.Black, New XPoint(50, yPos))
 
-        ' Save the PDF file
         Dim filePath As String = "C:\Users\febin\OneDrive\Documents\Payment_Receipt_" & payId & ".pdf"
         doc.Save(filePath)
         doc.Close()
 
         MessageBox.Show("Receipt saved at: " & filePath, "Receipt Generated", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
-
 End Class
